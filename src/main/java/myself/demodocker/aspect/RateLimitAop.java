@@ -49,7 +49,7 @@ public class RateLimitAop {
 
 
         // 3.调用原生的RateLimiter创建令牌 保证每个请求对应都是单例的RateLimiter
-        // /index---RateLimiter /order --RateLimiter 使用hashMap key为 请求的url地址##
+        // index---RateLimiter /order --RateLimiter 使用hashMap key为 请求的url地址##
         RateLimiter rateLimiter = null;
         String methodName = method.getName();
 //        rateHashMap.putIfAbsent(methodName, RateLimiter.create(permitsPerSecond));
